@@ -65,50 +65,45 @@ MODEL GRAPH:
 
 
 Program
-ac=23.8; 
-am=11.9; 
-fc=6770;
-fm=677;
-fs=45000; 
-b=5.5;
-t=0:1/fs:3/fm;
 
-m=am*cos(2*3.14*fm*t);
+```
+Am=6.3;
+fm=504;
+Ac=12.6;
+fc=5040;
+fs=504000;
+t=0:1/fs:3/fm;
+m=Am*cos(2*3.14*fm*t);
 subplot(3,1,1);
 plot(t,m);
-title('Message signal');
-
-c=ac*cos(2*3.14*fc*t);
+c=Ac*cos(2*3.14*fc*t);
 subplot(3,1,2);
 plot(t,c);
-title('Carrier signal');
-
-efm= ac*cos((2*3.14*fc*t)+b*sin(2*3.14*fm*t));
+efm=Ac*cos((2*3.14*fc*t)+5.1*sin(2*3.14*fm*t));
 subplot(3,1,3);
 plot(t,efm);
-title('Frequency modulated signal');
-
-
+```
 Output Waveform
 
-<img width="921" height="809" alt="Screenshot 2025-10-17 091304" src="https://github.com/user-attachments/assets/dc9d498e-2832-462a-a250-f8136e4088f4" />
-
+<img width="1912" height="1133" alt="image" src="https://github.com/user-attachments/assets/ae1e19ae-0256-42c2-a36e-4c0cbacbd613" />
 
 
 Tabulation
 
-<img width="866" height="596" alt="Screenshot 2025-10-17 091318" src="https://github.com/user-attachments/assets/265e67fe-2484-41d6-b680-7465529799af" />
+![WhatsApp Image 2025-11-28 at 20 40 11_dcaf1a68](https://github.com/user-attachments/assets/01a5a453-5ae8-450b-9073-25ed48073494)
+
 
 
 Calculation
+![WhatsApp Image 2025-11-28 at 20 55 41_bf850cd8](https://github.com/user-attachments/assets/575c82cc-10b1-49bd-82ad-22cb352c7c09)
 
 
 
-Frequency Deviation Practical = 
+Frequency Deviation Practical = 2058.83
 
-Modulation Index Practical	= 
+Modulation Index Practical	= 4.8
 
-Modulation Index Theoretical	=
+Modulation Index Theoretical	=5.1
 
 
 
